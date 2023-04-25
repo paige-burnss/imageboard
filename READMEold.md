@@ -1,4 +1,4 @@
-# Imageboard
+# Image Board
 
 <h3>Team Members:</h3> 
 Paige Burns, Mariam J. Ndwatta, and Alexander Sellström
