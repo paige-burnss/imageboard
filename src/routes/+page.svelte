@@ -1,3 +1,8 @@
+<script lang="ts">
+	import { ListBox, ListBoxItem } from '@skeletonlabs/skeleton';
+	let valueSingle: string = 'books';
+</script>
+
 <!-- YOU CAN DELETE EVERYTHING IN THIS PAGE -->
 
 <div class="container h-full mx-auto flex justify-center items-center">
@@ -10,4 +15,9 @@
 			<li><code>/src/routes/+page.svelte</code> - this page, you can replace the contents</li>
 		</ul>
 	</div>
+	<ListBox>
+		<ListBoxItem bind:group={valueSingle} name="medium" value="books">Books</ListBoxItem>
+		<ListBoxItem bind:group={valueSingle} name="medium" value="movies">Movies</ListBoxItem>
+		<ListBoxItem bind:group={valueSingle} name="medium" value="tv">TV</ListBoxItem>
+	</ListBox>
 </div>
