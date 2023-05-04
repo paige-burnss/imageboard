@@ -1,23 +1,33 @@
-<script lang="ts">
-	import { ListBox, ListBoxItem } from '@skeletonlabs/skeleton';
-	let valueSingle: string = 'books';
-</script>
-
-<!-- YOU CAN DELETE EVERYTHING IN THIS PAGE -->
-
-<div class="container h-full mx-auto flex justify-center items-center">
-	<div class="space-y-5">
-		<h1>Let's get cracking bones!</h1>
-		<p>Start by exploring:</p>
-		<ul>
-			<li><code>/src/routes/+layout.svelte</code> - barebones layout, the CSS import order is critical!</li>
-			<li><code>/src/app.postcss</code> - minimal css to make the page full screen, may not be relevant for your project</li>
-			<li><code>/src/routes/+page.svelte</code> - this page, you can replace the contents</li>
-		</ul>
-	</div>
-	<ListBox>
-		<ListBoxItem bind:group={valueSingle} name="medium" value="books">Books</ListBoxItem>
-		<ListBoxItem bind:group={valueSingle} name="medium" value="movies">Movies</ListBoxItem>
-		<ListBoxItem bind:group={valueSingle} name="medium" value="tv">TV</ListBoxItem>
-	</ListBox>
-</div>
+<script>
+    import VirtualList from 'svelte-tiny-virtual-list';
+    import InfiniteLoading from 'svelte-infinite-loading';
+  
+    let data = ['A', 'B', 'C', 'D', 'E', 'F', /* ... */];
+  
+    function infiniteHandler({ detail: { complete, error } }) {
+      try {
+        // Normally you'd make an http request here...
+  
+        const newData = ['G', 'H', 'I', 'J', 'K', 'L', /* ... */];
+        
+        data = [...data, ...newData];
+        complete();
+      } catch (e) {
+        error();
+      }
+    }
+  </script>
+  
+  <VirtualList
+      width="100%"
+      height={600}
+      itemCount={data.length}
+      itemSize={50}>
+    <div slot="item" let:index let:style {style}>
+      Letter: {data[index]}, Row: #{index}
+    </div>
+  
+    <div slot="footer">
+      <InfiniteLoading on:infinite={infiniteHandler} />
+    </div>
+  </VirtualList>
