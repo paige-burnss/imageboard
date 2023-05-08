@@ -34,7 +34,7 @@
       itemCount={data.length}
       itemSize={768}> <!--TODO: Set item size according to thread image size.-->
     <div slot="item" let:index let:style {style}>
-        <div class="grid grid-cols-2 gap-4">
+        <div class="h-56 grid grid-cols-2 gap-4 content-start" id="scroll-virtual-custom">
             <div class="justify-self-start">
                 <span class="badge variant-filled">{data[index].board}</span>
             </div>
