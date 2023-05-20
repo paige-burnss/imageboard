@@ -7,12 +7,8 @@ import { SlideToggle, FileButton} from '@skeletonlabs/skeleton';
 let value: boolean = false;
 
 </script>
-<AppBar class="items-end">
-<div class="flex flex-row-reverse items-center gap-4">
-        <SlideToggle class="py-4" name="slider-label" checked active="bg-primary-500" size="sm"> <icon> dark mode</icon></SlideToggle> 
-        <FileButton class="py-4" name="files" button="variant-soft-primary">Language</FileButton>
-    </div>
-</AppBar>
+
+
 <!-- <nav> <a href="/"> Home </a> 
     <a href="/boards"> Popular boards</a>
 
@@ -20,8 +16,6 @@ let value: boolean = false;
 
   
 <div class="container mx-auto justify-content-center align-items-center">
-
-    <h1 class="text-center"> IMOSHI </h1>
 
     <div class="card">
         <header class="card-header text-center">Welcome to IMOSHI</header>
@@ -36,12 +30,6 @@ let value: boolean = false;
 
 <div class="container">
     <h3> How it works </h3>
-</div>
-
-
-<div class="container mx-auto">
-
-
 </div>
 
 

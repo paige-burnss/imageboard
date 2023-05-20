@@ -1,6 +1,8 @@
 <script>
-    import VirtualList from 'svelte-tiny-virtual-list';
-    import InfiniteLoading from 'svelte-infinite-loading';
+    //import VirtualList from 'svelte-tiny-virtual-list';
+    //import InfiniteLoading from 'svelte-infinite-loading';
+    import { AppShell } from '@skeletonlabs/skeleton';
+    import { InputChip } from '@skeletonlabs/skeleton';
   
     let data = [{
         board: "History",
@@ -29,35 +31,44 @@
     }
   </script>
 
+
+
+
+
+
 <nav> <a href="/"> Home </a> 
 </nav>
   
 <h1> Browse through the threads</h1>
 
-  <VirtualList
-      width="100%"
-      height="100%"
-      itemCount={data.length}
-      itemSize={768}> <!--TODO: Set item size according to thread image size.-->
-    <div slot="item" let:index let:style {style}>
-        <div class="h-56 grid grid-cols-2 gap-4 content-start" id="scroll-virtual-custom">
-            <div class="justify-self-start">
-                <span class="badge variant-filled">{data[index].board}</span>
-            </div>
-            <div class="justify-self-end">{data[index].replies} replies</div>
-            <div class="col-span-full">
-                <img class="rounded-lg object-cover" style="width:100%;max-height:512px"
-                 src={data[index].image} alt="Placeholder">
-            </div>
-            <div class="col-span-full">
-                {data[index].text}
-            </div>
-        </div>
-    </div>
+
+
+
+<!-- <VirtualList -->
+<!--      width="100%"-->
+<!--      height="100%"-->
+<!--      itemCount={data.length}-->
+<!--      itemSize={768}> <!--TODO: Set item size according to thread image size.-->
+<!--    <div slot="item" let:index let:style {style}>-->
+<!--        <div class="h-56 grid grid-cols-2 gap-4 content-start" id="scroll-virtual-custom">-->
+<!--            <div class="justify-self-start">-->
+<!--               <span class="badge variant-filled">{data[index].board}</span>-->
+<!--           </div>-->
+<!--           <div class="justify-self-end">{data[index].replies} replies</div>-->
+<!--           <div class="col-span-full">-->
+<!--               <img class="rounded-lg object-cover" style="width:100%;max-height:512px"-->
+<!--                src={data[index].image} alt="Placeholder">-->
+<!--           </div>-->
+<!--           <div class="col-span-full">-->
+<!--               {data[index].text}-->
+<!--           </div>-->
+<!--       </div>-->
+<!--   </div>-->
   
-    <div slot="footer">
-        <InfiniteLoading on:infinite={infiniteHandler} />
-    </div>
-  </VirtualList>
+<!--   <div slot="footer">-->
+<!--       <InfiniteLoading on:infinite={infiniteHandler} />-->
+<!--   </div> -->
+<!-- </VirtualList> -->
+    
 
-
+  
