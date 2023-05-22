@@ -5,7 +5,7 @@
 
 let items = getItems(0, 10);
 
-function getItems(nextGroupKey, count) {
+function getItems(nextGroupKey: number, count: number) {
   const nextItems = [];
 
   for (let i = 0; i < count; ++i) {
@@ -19,6 +19,12 @@ function getItems(nextGroupKey, count) {
 
   
 <h1> Browse through the threads</h1>
+
+<nav> <a href="/"> Home </a> 
+    <a href="/thread"> Individual board </a>
+
+
+</nav>
 
 <MasonryInfiniteGrid
   class="container"

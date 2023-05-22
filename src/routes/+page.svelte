@@ -35,7 +35,7 @@ let value: boolean = false;
 
 <div class="container mx-auto">
 
-    <nav> <a href="/threads"> Popular Threads </a></nav>
+    <nav> <a href="/catalog"> Popular Threads </a></nav>
 
 </div>
 
