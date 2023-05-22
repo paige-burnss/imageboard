@@ -17,9 +17,6 @@
 	import { SlideToggle, FileButton, AppBar} from '@skeletonlabs/skeleton';
 
 	let value: boolean = false;
-
-	import src from "../images/IMOSHI.png";
-	import { bubble } from 'svelte/internal';
 </script>
 
 <AppShell>
@@ -28,12 +25,13 @@
         <div class="container-sidebar flex flex-col space-y-4" id="custom-sidebar-threads">
             <div class="flex space-x-4">
                 <h5> Boards  </h5>
-                 <button type="button" class="btn-icon btn-icon-sm variant-filled">+</button> 
+                 <button type="button" class="btn-icon btn-icon-sm variant-ringed-surface">+</button> 
             </div>
-        <InputChip bind:value={list} name="chips" maxlength={5} placeholder="Enter any value..." />
-        <div class="flex space-x-4">
+        <InputChip bind:value={list} name="chips" maxlength={5} class="!bg-transparent" placeholder="Enter any value..." />
+        <hr/>
+        <div class="flex space-x-8">
             <h5> Saved Threads  </h5>
-             <button type="button" class="btn-icon btn-icon-sm variant-ringed-surface ">^</button>
+             <button type="button" class="btn-icon btn-icon-sm variant-soft-surface ">^</button>
         </div>
 
 
