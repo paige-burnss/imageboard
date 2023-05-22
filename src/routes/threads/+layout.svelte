@@ -10,7 +10,7 @@
 	import { AppShell } from '@skeletonlabs/skeleton';
     import { InputChip } from '@skeletonlabs/skeleton';
 
-	let list = [];
+	let list: string[] = ['video games', 'AI', 'techno', 'music'];
 
 	import { autoModeWatcher } from '@skeletonlabs/skeleton';
 	import { LightSwitch } from '@skeletonlabs/skeleton';
@@ -19,12 +19,27 @@
 	let value: boolean = false;
 
 	import src from "../images/IMOSHI.png";
+	import { bubble } from 'svelte/internal';
 </script>
 
 <AppShell>
 
 	<svelte:fragment slot="sidebarLeft">
-	<div class="container-sidebar">
+        <div class="container-sidebar flex flex-col space-y-4" id="custom-sidebar-threads">
+            <div class="flex space-x-4">
+                <h5> Boards  </h5>
+                 <button type="button" class="btn-icon btn-icon-sm variant-filled">+</button> 
+            </div>
+        <InputChip bind:value={list} name="chips" maxlength={5} placeholder="Enter any value..." />
+        <div class="flex space-x-4">
+            <h5> Saved Threads  </h5>
+             <button type="button" class="btn-icon btn-icon-sm variant-ringed-surface ">^</button>
+        </div>
+
+
+    </div>
+
+<!-- 	<div class="container-sidebar">
 		<div class="card">
                     <section class="p-4">
                         <h5 class="h5 font-bold">Boards <button type="button" class="btn-icon btn-sm variant-ringed">+</button> </h5>
@@ -73,9 +88,9 @@
 					</div>
                     </section>
                 </div>
-	</div>
+	</div> -->
 	</svelte:fragment>
+
+    <!-- <InputChip bind:value={list} name="chips" placeholder="Enter any value..." /> -->
 	<slot />
 </AppShell>
-
-<InputChip bind:value={list} name="chips" placeholder="Enter any value..." />

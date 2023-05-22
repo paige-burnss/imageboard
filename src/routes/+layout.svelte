@@ -18,7 +18,7 @@
 
 	let value: boolean = false;
 
-	import src from "./images/IMOSHI.png";
+	import logo from "./images/IMOSHI.png";
 </script>
 
 <AppShell>
@@ -26,7 +26,7 @@
 	<svelte:fragment slot="header">
 		<div class="flex-auto flex justify-between items-center header">
 			<div>
-				<img src="{src}" alt="image" width="300px"/>
+				<nav> <a href="/"> <img src="{logo}" alt="image" width="300px"/> </a></nav>
 			</div>
 			<div>
 				<AppBar class="!bg-transparent">
