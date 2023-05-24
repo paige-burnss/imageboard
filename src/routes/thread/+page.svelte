@@ -1,7 +1,6 @@
 <script lang="ts">
-    //import VirtualList from 'svelte-tiny-virtual-list';
-    //import InfiniteLoading from 'svelte-infinite-loading';
     import { MasonryInfiniteGrid } from "@egjs/svelte-infinitegrid";
+    import Post from "./post.svelte";
 
 let items = getItems(0, 10);
 
@@ -45,26 +44,9 @@ function getItems(nextGroupKey: number, count: number) {
   }}
   let:visibleItems
 >
-  <div class="grid grid-cols-2 gap-4 container">
-    <img class="col-span-full rounded-2xl object-cover"
-      src={`https://naver.github.io/egjs-infinitegrid/assets/image/${
-        (0 % 33) + 1
-      }.jpg`}
-      alt="egjs"
-    />
-  </div>
   {#each visibleItems as item (item.key)}
     <div class="item">
-      {#if item.key % 4 > 1}
-        <img class="rounded-t-2xl"
-        src={`https://naver.github.io/egjs-infinitegrid/assets/image/${
-          (item.key % 33) + 1
-        }.jpg`}
-        alt="egjs"
-        />
-      {:else}
-      <p>Text</p>
-      {/if}
+      <Post index={item.key} />
     </div>
   {/each}
 </MasonryInfiniteGrid>
