@@ -2,6 +2,7 @@
     //import VirtualList from 'svelte-tiny-virtual-list';
     //import InfiniteLoading from 'svelte-infinite-loading';
     import { MasonryInfiniteGrid } from "@egjs/svelte-infinitegrid";
+	import SearchBar from "./SearchBar.svelte";
 
 let items = getItems(0, 10);
 
@@ -17,16 +18,21 @@ function getItems(nextGroupKey: number, count: number) {
 }
   </script>
 
-  
+<div class="container">
+  <div class="overlay">
 <h1> Browse through the threads</h1>
 
 <nav> <a href="/"> Home </a> 
-    <a href="/thread"> Individual board </a>
+    <a href="/"> Individual board </a>
+
+    
 
 
 </nav>
 
-<MasonryInfiniteGrid
+</div>
+<div class="flex flex-wrap">
+  <MasonryInfiniteGrid
   class="container"
   gap={5}
   {items}
@@ -61,6 +67,8 @@ function getItems(nextGroupKey: number, count: number) {
   {/each}
 </MasonryInfiniteGrid>
 
+</div>
+</div>
 
 
 

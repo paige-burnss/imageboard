@@ -20,8 +20,24 @@
 
 	import logo from "./images/IMOSHI.png";
 </script>
+ <header >
 
-<AppShell>
+    <div class="flex-auto flex justify-between items-center header">
+        <div>
+            <nav> <a href="/"> <img src="{logo}" alt="image" width="300px"/> </a></nav>
+        </div>
+        <div>
+            <AppBar class="!bg-transparent">
+            <div class="flex flex-row-reverse items-center gap-4">
+                <LightSwitch></LightSwitch>
+                <FileButton class="py-4" name="files" button="variant-soft-primary">Language</FileButton>
+            </div>
+            </AppBar>
+        </div>
+    </div>
+
+ </header>
+<!-- <AppShell>
 
 	<svelte:fragment slot="header">
 		<div class="flex-auto flex justify-between items-center header">
@@ -39,4 +55,5 @@
 		</div>
 	</svelte:fragment>
     <slot />
-</AppShell>
+</AppShell> -->
+<slot />
