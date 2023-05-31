@@ -24,16 +24,13 @@ function getItems(nextGroupKey: number, count: number) {
 
 <nav> <a href="/"> Home </a> 
     <a href="/"> Individual board </a>
-
-    
-
-
 </nav>
 
 </div>
-<div class="flex flex-wrap">
+
+
   <MasonryInfiniteGrid
-  class="container"
+  class="container flex"
   gap={5}
   {items}
   on:requestAppend={({ detail: e }) => {
@@ -67,7 +64,6 @@ function getItems(nextGroupKey: number, count: number) {
   {/each}
 </MasonryInfiniteGrid>
 
-</div>
 </div>
 
 
