@@ -6,7 +6,7 @@
 </script>
 
 {#if index == 0}
-  <article class="original-post space-y-4">
+  <article class="original-post space-y-4 m-4">
     <img class="rounded-2xl object-cover"
       src="{image}"
       alt="egjs"
@@ -16,7 +16,7 @@
   </article>
 {:else}
   {#if index % 3 > 0}
-    <article class="image-post space-y-4">
+    <article class="image-post space-y-4 m-4">
       <PostHeader index={index} />
       <div class="flex flex-row gap-8">
         <img class="rounded-2xl object-cover w-64"
@@ -27,11 +27,9 @@
       </div>
     </article>
   {:else}
-    <article class="text-post space-y-4">
+    <article class="text-post space-y-4 m-4">
       <PostHeader index={index} />
       <p>Lorem ipsum bla bla bla</p>
     </article>
   {/if}
 {/if}
-
-<hr class="!border-t-2 py-2" />

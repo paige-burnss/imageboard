@@ -9,7 +9,7 @@
 </script>
 
 
-<div class="flex flex-row align-middle space-x-2 px-2">
+<div class="flex flex-row align-middle space-x-2">
   {#if index == 0}
     <span class="badge variant-filled">Board</span>
   {/if}

@@ -18,9 +18,7 @@ function getItems(nextGroupKey: number, count: number) {
 
 <style>
   .item {
-    display: inline-block;
     width: 100%;
-    opacity: 1;
   }
 </style>
 
@@ -33,7 +31,7 @@ function getItems(nextGroupKey: number, count: number) {
 </nav>
 
 <MasonryInfiniteGrid
-  class="container"
+  class="container divide-y divide-slate-700"
   gap={5}
   {items}
   on:requestAppend={({ detail: e }) => {
@@ -44,7 +42,7 @@ function getItems(nextGroupKey: number, count: number) {
   let:visibleItems
 >
   {#each visibleItems as item (item.key)}
-    <div class="item space-y-8">
+    <div class="item space-y-4">
       <Post index={item.key} />
     </div>
   {/each}
