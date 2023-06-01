@@ -18,14 +18,13 @@ function getItems(nextGroupKey: number, count: number) {
 }
   </script>
 
-<div class="container">
-  <div class="overlay">
-<h1> Browse through the threads</h1>
 
-<nav> <a href="/"> Home </a> 
+<div>
+  <h1> Browse through the threads</h1>
+  <nav>
+    <a href="/"> Home </a> 
     <a href="/"> Individual board </a>
-</nav>
-
+  </nav>
 </div>
 
 
@@ -63,9 +62,6 @@ function getItems(nextGroupKey: number, count: number) {
     </div>
   {/each}
 </MasonryInfiniteGrid>
-
-</div>
-
 
 
 
