@@ -87,8 +87,15 @@ function greyOut(e: Event): void {
             <a href="/catalog" class="btn btn-sm variant-filled">See All</a>
         </h3>
     </div>
-
+    
+    <div class="card p-4 board">Fitness</div>
+    <div class="card p-4 board">Video Games</div>
+    <div class="card p-4 board">Memes</div>
+    <div class="card p-4 board">Anime</div>
+    <div class="card p-4 board">Sports</div>
 </div>
+
+<br><br><br><br>
 
 <div class="container3 mx-auto justify-content-center align-items-center">
     <div class="subtitle">
