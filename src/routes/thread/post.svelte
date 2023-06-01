@@ -1,5 +1,5 @@
 <script lang="ts">
-  export let index: Number;
+  export let index: number;
   import PostHeader from "./postHeader.svelte";
 
   import image from "../images/1.jpg";

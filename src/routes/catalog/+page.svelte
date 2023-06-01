@@ -1,22 +1,22 @@
 <script lang="ts">
-    //import VirtualList from 'svelte-tiny-virtual-list';
-    //import InfiniteLoading from 'svelte-infinite-loading';
-    import { MasonryInfiniteGrid } from "@egjs/svelte-infinitegrid";
-	import SearchBar from "./SearchBar.svelte";
+  //import VirtualList from 'svelte-tiny-virtual-list';
+  //import InfiniteLoading from 'svelte-infinite-loading';
+  import { MasonryInfiniteGrid } from "@egjs/svelte-infinitegrid";
+	import ThreadHeader from "./threadHeader.svelte";
 
-let items = getItems(0, 10);
+  let items = getItems(0, 10);
 
-function getItems(nextGroupKey: number, count: number) {
-  const nextItems = [];
+  function getItems(nextGroupKey: number, count: number) {
+    const nextItems = [];
 
-  for (let i = 0; i < count; ++i) {
-    const nextKey = nextGroupKey * count + i;
+    for (let i = 0; i < count; ++i) {
+      const nextKey = nextGroupKey * count + i;
 
-    nextItems.push({ groupKey: nextGroupKey, key: nextKey });
+      nextItems.push({ groupKey: nextGroupKey, key: nextKey });
+    }
+    return nextItems;
   }
-  return nextItems;
-}
-  </script>
+</script>
 
 <!--
 <div>
@@ -28,7 +28,7 @@ function getItems(nextGroupKey: number, count: number) {
 </div>
 -->
 
-  <MasonryInfiniteGrid
+<MasonryInfiniteGrid
   class="container"
   gap={8}
   {items}
@@ -40,30 +40,20 @@ function getItems(nextGroupKey: number, count: number) {
   let:visibleItems
 >
   {#each visibleItems as item (item.key)}
-    <div class="item">
-      <div class="block card card-hover">
-        <nav>
-          <a href="/thread">
-            <img class="rounded-t-2xl"
-              src={`https://naver.github.io/egjs-infinitegrid/assets/image/${
-                (item.key % 33) + 1
-              }.jpg`}
-              alt="egjs"
-            />
-          </a>
-        </nav>
-        <div class="p-2 flex flex-nowrap">
-          <div><span class="badge variant-filled">Badge</span></div>
-          <div>02</div>
-          <div>03</div>
-        </div>
-        <div class="p-4">
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.
-          </p>
-        </div>
-      </div>
-    </div>
+    <article class="item block card card-hover space-y-1">
+      <a href="/thread">
+        <img class="rounded-t-2xl"
+          src={`https://naver.github.io/egjs-infinitegrid/assets/image/${
+            (item.key % 33) + 1
+            }.jpg`}
+          alt="egjs"
+        />
+      </a>
+      <ThreadHeader index={item.key} />
+      <p class="p-4 pt-0">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.
+      </p>
+    </article>
   {/each}
 </MasonryInfiniteGrid>
 

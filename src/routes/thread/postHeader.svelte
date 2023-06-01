@@ -1,5 +1,5 @@
 <script lang="ts">
-  export let index: Number;
+  export let index: number;
   
   import Icon from "svelte-awesome";
   /// *** Embedded Icons ***
