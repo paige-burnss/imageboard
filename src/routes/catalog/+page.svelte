@@ -18,7 +18,7 @@ function getItems(nextGroupKey: number, count: number) {
 }
   </script>
 
-
+<!--
 <div>
   <h1> Browse through the threads</h1>
   <nav>
@@ -26,7 +26,7 @@ function getItems(nextGroupKey: number, count: number) {
     <a href="/"> Individual board </a>
   </nav>
 </div>
-
+-->
 
   <MasonryInfiniteGrid
   class="container"
@@ -42,12 +42,16 @@ function getItems(nextGroupKey: number, count: number) {
   {#each visibleItems as item (item.key)}
     <div class="item">
       <div class="block card card-hover">
-        <img class="rounded-t-2xl"
-          src={`https://naver.github.io/egjs-infinitegrid/assets/image/${
-            (item.key % 33) + 1
-          }.jpg`}
-          alt="egjs"
-        />
+        <nav>
+          <a href="/thread">
+            <img class="rounded-t-2xl"
+              src={`https://naver.github.io/egjs-infinitegrid/assets/image/${
+                (item.key % 33) + 1
+              }.jpg`}
+              alt="egjs"
+            />
+          </a>
+        </nav>
         <div class="p-2 flex flex-nowrap">
           <div><span class="badge variant-filled">Badge</span></div>
           <div>02</div>
