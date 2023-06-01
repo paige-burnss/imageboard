@@ -9,10 +9,13 @@
 </script>
 
 
-<div class="flex flex-row align-middle space-x-2">
+<div class="flex flex-row align-middle space-x-2 px-2">
+  {#if index == 0}
+    <span class="badge variant-filled">Board</span>
+  {/if}
   <span class="badge variant-filled">@{10*2}#{4}</span>
   <span class="grow">n minutes ago</span>
-  <div class = space-x-6>
+  <div class = space-x-4>
     <Icon href="/" data={reply}/>
     {#if index == 0}
       <Icon href="/" data={bookmark}/>
