@@ -9,9 +9,13 @@
   
   <div class="flex flex-row align-middle space-x-2 px-4 py-2">
     <span class="badge variant-filled">Board</span>
-    <span class="grow">12:34</span>
-    <div class="space-x-4">
-      <Icon href="/" data={bookmark}/>
-      <Icon href="/" data={ellipsisH}/>
+    <span class="self-center grow">12:34</span>
+    <div class="space-x-1">
+      <button type="button" class="btn-icon btn-icon-sm variant-ghost">
+        <Icon href="/" data={bookmark}/>
+      </button>
+      <button type="button" class="btn-icon btn-icon-sm variant-ghost">
+        <Icon href="/" data={ellipsisH}/>
+      </button>
     </div>
   </div>
