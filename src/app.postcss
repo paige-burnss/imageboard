@@ -15,10 +15,53 @@ a {
 .container {
     justify-content: center;
     max-width: 768px;
-    height: 600px;
     margin: 0 auto !important;
-    float: none !important; 
+    float: none !important;
+    padding: 0% 2% 2% 2%;
+}
+
+.name{
+  font-size: 75px;
+}
+
+.namespan{
+  font-weight: bolder;
+  display: inline-block;
+  animation: namemover 4s linear infinite;
+  color: #5C54E5;
+}
+
+@keyframes namemover{
+  0%{
+    text-shadow: 0 0 30px rgba(0, 0, 0, 0);
   }
+  50%{
+    text-shadow: 0 0 30px rgba(0, 0, 0, 0);
+    transform: translateY(30px);
+  }
+  100%{
+    text-shadow: 0 0 30px rgba(0, 0, 0, 0);
+  }
+}
+
+.namespan:nth-child(1){
+  animation-delay: 0.25s;
+}
+.namespan:nth-child(2){
+  animation-delay: 0.5s;
+}
+.namespan:nth-child(3){
+  animation-delay: 0.75s;
+}
+.namespan:nth-child(4){
+  animation-delay: 1s;
+}
+.namespan:nth-child(5){
+  animation-delay: 1.25s;
+}
+.namespan:nth-child(6){
+  animation-delay: 1.5s;
+}
   
   .item {
     display: inline-block;
@@ -42,21 +85,42 @@ a {
     float: none !important; 
 }
 
-.container{
-    padding: 0% 2% 2% 2%;
-}
-
 .container-sidebar{
     padding: 7% 7% 7% 7%;
 }
 
 .header{
-    padding: 0% 2% 0% 2%;
+    padding: 1% 2% 0% 2%;
+}
+
+.container2 {
+    justify-content: center;
+    max-width: 768px;
+    margin: 0 auto !important;
+    float: none !important;
+    padding: 0% 2% 2% 2%;
+    border-radius: 10px;
+    background-color: grey;
+}
+
+.container3 {
+    justify-content: center;
+    max-width: 1100px;
+    margin: 0 auto !important;
+    float: none !important;
+    padding: 0% 2% 2% 2%;
+    border-radius: 10px;
 }
 
 #custom-sidebar-threads{
-background: #EFEEFD;
-box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px rgba(0, 0, 0, 0.14), 0px 1px 10px rgba(0, 0, 0, 0.12);
-border-radius: 20px;
+  background: #EFEEFD;
+  box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px rgba(0, 0, 0, 0.14), 0px 1px 10px rgba(0, 0, 0, 0.12);
+  border-radius: 20px;
+}
 
+.card{
+  padding: 2%;
+  box-shadow: 0px 1px 10px 0px #0000001F;
+  box-shadow: 0px 4px 5px 0px #00000024;
+  box-shadow: 0px 2px 4px -1px #00000033;
 }

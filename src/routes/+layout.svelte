@@ -5,6 +5,7 @@
 	import '@skeletonlabs/skeleton/styles/all.css';
 	// Most of your app wide CSS should be put in this file
 	import '../app.postcss';
+	import './theme.postcss';
 
 
 	import { AppShell } from '@skeletonlabs/skeleton';
@@ -26,13 +27,14 @@
 	<svelte:fragment slot="header">
 		<div class="flex-auto flex justify-between items-center header">
 			<div>
-				<nav> <a href="/"> <img src="{logo}" alt="image" width="300px"/> </a></nav>
+				<nav> <a href="/"> <img src="{logo}" alt="image" width="50px"/> </a></nav>
 			</div>
 			<div>
 				<AppBar class="!bg-transparent">
 				<div class="flex flex-row-reverse items-center gap-4">
 					<LightSwitch></LightSwitch>
-					<FileButton class="py-4" name="files" button="variant-soft-primary">Language</FileButton>
+					<button type="button" class="btn variant-filled">EN</button>
+					<!-- <FileButton class="py-4" name="files" button="variant-soft-primary">Language</FileButton> -->
 				</div>
 				</AppBar>
 			</div>
