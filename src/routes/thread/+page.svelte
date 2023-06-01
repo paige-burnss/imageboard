@@ -20,7 +20,6 @@ function getItems(nextGroupKey: number, count: number) {
   .item {
     display: inline-block;
     width: 100%;
-    max-width: 768px;
     opacity: 1;
   }
 </style>
@@ -45,7 +44,7 @@ function getItems(nextGroupKey: number, count: number) {
   let:visibleItems
 >
   {#each visibleItems as item (item.key)}
-    <div class="item">
+    <div class="item space-y-8">
       <Post index={item.key} />
     </div>
   {/each}
