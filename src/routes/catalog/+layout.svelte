@@ -9,6 +9,7 @@
 
   import { AppShell, InputChip } from '@skeletonlabs/skeleton';
   import { Autocomplete } from '@skeletonlabs/skeleton';
+  import { FileDropzone } from '@skeletonlabs/skeleton';
   import type { AutocompleteOption } from '@skeletonlabs/skeleton';
   let inputChip = '';
   let inputChipList: string[] = ['vanilla', 'chocolate'];

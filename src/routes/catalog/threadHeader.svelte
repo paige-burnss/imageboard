@@ -1,7 +1,7 @@
 <script lang="ts">
     export let index: number;
     
-    import Icon from "svelte-awesome";
+    import  Icon from "svelte-awesome";
     /// *** Embedded Icons ***
     import bookmark from 'svelte-awesome/icons/bookmark';
     import ellipsisH from 'svelte-awesome/icons/ellipsisH';

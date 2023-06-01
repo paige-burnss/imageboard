@@ -23,12 +23,12 @@ function getItems(nextGroupKey: number, count: number) {
 </style>
 
   
-<h1> Browse through the threads</h1>
+<!-- <h1> Browse through the threads</h1>
 
 <nav>
   <a href="/"> Home </a> 
   <a href="/thread"> Individual board </a>
-</nav>
+</nav> -->
 
 <MasonryInfiniteGrid
   class="container divide-y divide-slate-700"
