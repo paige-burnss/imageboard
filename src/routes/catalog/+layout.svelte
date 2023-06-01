@@ -7,35 +7,39 @@
 	import '../../app.postcss';
 
 
-	import { AppShell } from '@skeletonlabs/skeleton';
-    import { InputChip } from '@skeletonlabs/skeleton';
+	import { AppShell, InputChip } from '@skeletonlabs/skeleton';
+	import SearchBar from './SearchBar.svelte';
+	let list: string[] = ['foo', 'bar', 'fizz', 'buzz'];
 
-	let list: string[] = ['video games', 'AI', 'techno', 'music'];
-
-	import { autoModeWatcher } from '@skeletonlabs/skeleton';
-	import { LightSwitch } from '@skeletonlabs/skeleton';
-	import { SlideToggle, FileButton, AppBar} from '@skeletonlabs/skeleton';
-
-	let value: boolean = false;
 </script>
 
-<AppShell>
+<!-- <div class="grid grid-cols-3 grid-flow-col auto-cols-max"> -->
+	<div class="flex-1 flex flex-wrap grow basis-0 max-width:100%">
+<div class="float:left;width:250px">
+	<div class="flex">
+	<aside class="h-screen sticky top-0">
+		<div class="container flex-initial w-80">
+		  <div class="container-sidebar flex flex-col space-y-4" id="custom-sidebar-threads">
+			<div class="flex space-x-4">
+			  <h5> Boards  </h5>
+			   <button type="button" class="btn-icon btn-icon-sm variant-ringed-surface">+</button> 
+			</div>
+			<!-- <SearchBar /> -->
+			<hr/>
+			<InputChip bind:value={list} name="chips" placeholder="Enter any category..." maxlength={7}/>
+			<!-- <FilterTags /> -->
+		  <hr/>
+		  <div class="flex space-x-8">
+			<h5> Saved Threads  </h5>
 
-	<svelte:fragment slot="sidebarLeft">
-        <div class="container-sidebar flex flex-col space-y-4" id="custom-sidebar-threads">
-            <div class="flex space-x-4">
-                <h5> Boards  </h5>
-                 <button type="button" class="btn-icon btn-icon-sm variant-ringed-surface">+</button> 
-            </div>
-        <InputChip bind:value={list} name="chips" maxlength={5} class="!bg-transparent" placeholder="Enter any value..." />
-        <hr/>
-        <div class="flex space-x-8">
-            <h5> Saved Threads  </h5>
-             <button type="button" class="btn-icon btn-icon-sm variant-soft-surface ">^</button>
-        </div>
-
-    </div>
-	</svelte:fragment>
-
+		</div>
+	</aside>
+</div>
+</div>
 	<slot />
-</AppShell>
+
+
+</div>
+
+		
+	
