@@ -19,8 +19,13 @@
 	let value: boolean = false;
 
 	import logo from "./images/IMOSHI.png";
+
+    import { Modal, modalStore } from '@skeletonlabs/skeleton';
+    import type { ModalSettings, ModalComponent } from '@skeletonlabs/skeleton';
 </script>
- 
+
+<Modal />
+
 <header >
 
     <div class="flex-auto flex justify-between items-center header">
