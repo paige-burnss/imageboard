@@ -39,22 +39,4 @@
     </div>
  </header>
  <slot />
-<!-- 
-	<svelte:fragment slot="header">
-		<div class="flex-auto flex justify-between items-center header">
-			<div>
-				<nav> <a href="/"> <img src="{logo}" alt="image" width="50px"/> </a></nav>
-			</div>
-			<div>
-				<AppBar class="!bg-transparent">
-				<div class="flex flex-row-reverse items-center gap-4">
-					<LightSwitch></LightSwitch>
-					<button type="button" class="btn variant-filled">EN</button>
-					<!-- <FileButton class="py-4" name="files" button="variant-soft-primary">Language</FileButton> -->
-				<!-- </div>
-				</AppBar>
-			</div>
-		</div>
-	</svelte:fragment>
-    <slot />
-</AppShell> --> 
+

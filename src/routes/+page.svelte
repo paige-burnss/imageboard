@@ -14,7 +14,7 @@ function greyOut(e: Event): void {
 
 </script>
 
-<div class="container mx-auto justify-content-center align-items-center">
+<div class="container1 mx-auto justify-content-center align-items-center">
     <div class="name text-center">
         <span class="namespan">I</span>
         <span class="namespan">M</span>
@@ -24,7 +24,7 @@ function greyOut(e: Event): void {
         <span class="namespan">I</span>
     </div>
     <br>
-    <div class="card">
+    <div class="card1">
         <section class="p-4 text-center">
             This is a simple image-based bulletin board where anyone can post comments and share images. 
             There are boards dedicated to a variety of topics that you can choose to view. 
@@ -38,7 +38,7 @@ function greyOut(e: Event): void {
         <h3> How It Works </h3>
     </div>
     <br>
-    <div id="howTo" class="card">
+    <div id="howTo" class="card1">
         <Stepper on:complete={greyOut}>
         <Step>
             <svelte:fragment slot="header">Viewing Boards:</svelte:fragment>
