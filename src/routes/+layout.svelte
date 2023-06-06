@@ -26,7 +26,7 @@
 
     <div class="flex-auto flex justify-between items-center header">
         <div>
-            <nav> <a href="/"> <img src="{logo}" alt="image" width="300px"/> </a></nav>
+            <nav> <a href="/"> <img src="{logo}" alt="image" width="50px"/> </a></nav>
         </div>
         <div>
             <AppBar class="!bg-transparent">
