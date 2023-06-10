@@ -30,7 +30,7 @@
 
 <MasonryInfiniteGrid
   class="container"
-  gap={8}
+  gap={5}
   {items}
   on:requestAppend={({ detail: e }) => {
     const nextGroupKey = (+e.groupKey || 0) + 1;
