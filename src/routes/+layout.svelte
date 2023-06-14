@@ -1,3 +1,4 @@
+<!--Here we add all the common UI components that ally to all the routes in the given directory/page.-->
 <script lang='ts'>
 	// The ordering of these imports is critical to your app working properly
 	import '@skeletonlabs/skeleton/themes/theme-crimson.css';
