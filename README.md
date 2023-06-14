@@ -1,7 +1,7 @@
 # Imageboard
 
 <h3>Team Members:</h3> 
-Paige Burns, Mariam J. Ndwatta (spent 100 hours), and Alexander Sellström ( spent 100 hours)
+Mariam J. Ndwatta (spent 100 hours), Alexander Sellström ( spent 100 hours), and Paige Burns ( spent 60 hours)
 
 ----
 
@@ -12,12 +12,24 @@ Imageboards have been around since 1999 and their appearances have barely change
 ## Installing dependencies
 
 Install Rust. Follow the instructions for your operating system here: https://tauri.app/v1/guides/getting-started/prerequisites
-Install dependencies with `npm install` (or `pnpm install` or `yarn`).
+
+
+Install dependencies with `npm install` (or `pnpm install` or `yarn`)
+
+
 If the above command didn't install `tauri-cli` (verify with `cargo tauri --version`) install it by running `cargo install tauri-cli`(to build from source)
+
+
 Alternatively, `tauri-cli` can also be installed from a pre-built binary with any of the following commands:
-    `npm add -D @tauri-apps/cli`
-    `yarn add -D @tauri-apps/cli`
-    `pnpm add -D @tauri-apps/cli`
+
+
+`npm add -D @tauri-apps/cli`
+
+
+`yarn add -D @tauri-apps/cli`
+
+
+`pnpm add -D @tauri-apps/cli`
 
 
 ## Building and running
