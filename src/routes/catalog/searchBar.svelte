@@ -31,7 +31,7 @@
   </script>
 
 
-<InputChip bind:input={inputChip} bind:value={inputChipList} name="chips" />
+<InputChip bind:input={inputChip} bind:value={inputChipList} name="chips" placeholder="Search for board..."/>
 
 <div class="card w-full max-w-sm max-h-48 p-4 overflow-y-auto">
   <Autocomplete
