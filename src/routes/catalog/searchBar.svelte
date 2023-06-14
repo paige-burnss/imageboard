@@ -14,6 +14,8 @@
     let inputChipList: string[] = [ ];
     let allowList: string [] = ['videogames, techno, nft, memes, fitness, gardening, memes']; 
 
+
+
   
     const boardCategories: AutocompleteOption[] = [
       { label: 'Videogames', value: 'videogames', keywords: 'gaming, fun', meta: { healthy: false } },
@@ -32,7 +34,10 @@
 
  
 <!-- This search bar componnet is built by combininig logic and the componets from Skeleton UI, namely the input chip and the Autocomplete. 
-    The functions above are now using a list of boardCategories, which you can browse through and search.  -->
+    The functions above are now using a list of boardCategories, which you can browse through and search. 
+The Autocomplete component does not contain it's own input by default. 
+Instead, by using input binding paired with an on:selection event, you may utilize this component alongside any type of input that takes in suggested values.
+These values are defined in the script above.  -->
 
 
 <InputChip bind:input={inputChip} bind:value={inputChipList} name="chips" placeholder="Search for board..."/>
