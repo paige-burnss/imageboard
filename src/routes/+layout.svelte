@@ -8,14 +8,8 @@
 	import './theme.postcss';
 
 
-	import { AppShell } from '@skeletonlabs/skeleton';
-    import { InputChip } from '@skeletonlabs/skeleton';
-
-	let list = [];
-
-	import { autoModeWatcher } from '@skeletonlabs/skeleton';
 	import { LightSwitch } from '@skeletonlabs/skeleton';
-	import { SlideToggle, FileButton, AppBar} from '@skeletonlabs/skeleton';
+	import { FileButton, AppBar} from '@skeletonlabs/skeleton';
 
 	let value: boolean = false;
 

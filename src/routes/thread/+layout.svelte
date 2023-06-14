@@ -10,7 +10,6 @@
   
   </script>
   
-  <!-- <div class="grid grid-cols-3 grid-flow-col auto-cols-max"> -->
     <div class="flex-1 flex flex-wrap grow basis-0 max-width:100%">
   <div class="float:left;width:250px">
     <div class="flex">
@@ -21,9 +20,8 @@
           <h5> Boards  </h5>
            <button type="button" class="btn-icon btn-icon-sm variant-ringed-surface">+</button> 
         </div>
-        <SearchBar /> 
         <hr/>
-        <!-- <FilterTags /> -->
+        <SearchBar /> 
         <hr/>
         <div class="flex space-x-8">
         <h5> Saved Threads  </h5>

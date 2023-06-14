@@ -30,6 +30,10 @@
   
   </script>
 
+ 
+<!-- This search bar componnet is built by combininig logic and the componets from Skeleton UI, namely the input chip and the Autocomplete. 
+    The functions above are now using a list of boardCategories, which you can browse through and search.  -->
+
 
 <InputChip bind:input={inputChip} bind:value={inputChipList} name="chips" placeholder="Search for board..."/>
 
