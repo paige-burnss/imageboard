@@ -6,29 +6,7 @@
     // Most of your app wide CSS should be put in this file
     import '../../app.postcss';
   
-  
-    import { AppShell, InputChip } from '@skeletonlabs/skeleton';
-    import { Autocomplete } from '@skeletonlabs/skeleton';
-    import { FileDropzone } from '@skeletonlabs/skeleton';
-    import type { AutocompleteOption } from '@skeletonlabs/skeleton';
-    let inputChip = '';
-    let inputChipList: string[] = ['vanilla', 'chocolate'];
-    const flavorAllowlist: string[] = ['neapolitan', 'pineapple', 'peach'];
-  
-    let boardInput = '';
-  
-    const flavorOptions: AutocompleteOption[] = [
-      { label: 'Vanilla', value: 'vanilla', keywords: 'plain, basic', meta: { healthy: false } },
-      { label: 'Chocolate', value: 'chocolate', keywords: 'dark, white', meta: { healthy: false } },
-      { label: 'Strawberry', value: 'strawberry', keywords: 'fruit', meta: { healthy: true } },
-      { label: 'Neapolitan', value: 'neapolitan', keywords: 'mix, strawberry, chocolate, vanilla', meta: { healthy: false } },
-      { label: 'Pineapple', value: 'pineapple', keywords: 'fruit', meta: { healthy: true } },
-      { label: 'Peach', value: 'peach', keywords: 'fruit', meta: { healthy: true } }
-    ];
-  
-    function onInputChipSelect(event: any): void {
-      boardInput = event.detail.label;
-    }
+  import SearchBar from '../catalog/searchBar.svelte';
   
   </script>
   
@@ -43,19 +21,8 @@
           <h5> Boards  </h5>
            <button type="button" class="btn-icon btn-icon-sm variant-ringed-surface">+</button> 
         </div>
-        <!-- <SearchBar /> -->
+        <SearchBar /> 
         <hr/>
-        <InputChip bind:input={inputChip} bind:value={inputChipList} name="chips" />
-  
-        <div class="card w-full max-w-sm max-h-48 p-4 overflow-y-auto">
-          <Autocomplete
-            bind:input={inputChip}
-            options={flavorOptions}
-            denylist={inputChipList}
-            on:selection={onInputChipSelect}
-          />
-        </div>
-                  
         <!-- <FilterTags /> -->
         <hr/>
         <div class="flex space-x-8">

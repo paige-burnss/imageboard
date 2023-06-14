@@ -1,7 +1,5 @@
 <script lang="ts">
 
-import { AppBar} from '@skeletonlabs/skeleton';
-import { SlideToggle, FileButton} from '@skeletonlabs/skeleton';
 import { Stepper, Step } from '@skeletonlabs/skeleton';
 
 let value: boolean = false;
@@ -99,8 +97,7 @@ function greyOut(e: Event): void {
 
 <div class="container3 mx-auto justify-content-center align-items-center">
     <div class="subtitle">
-        <h3> Popular Threads
-        </h3>
+        <h3> Popular Threads</h3>
     </div>
 </div>
 
