@@ -1,6 +1,4 @@
 <script lang="ts">
-  //import VirtualList from 'svelte-tiny-virtual-list';
-  //import InfiniteLoading from 'svelte-infinite-loading';
   import { MasonryInfiniteGrid } from "@egjs/svelte-infinitegrid";
 	import ThreadHeader from "./threadHeader.svelte";
 
@@ -18,15 +16,6 @@
   }
 </script>
 
-<!--
-<div>
-  <h1> Browse through the threads</h1>
-  <nav>
-    <a href="/"> Home </a> 
-    <a href="/"> Individual board </a>
-  </nav>
-</div>
--->
 
 <MasonryInfiniteGrid
   class="container"
