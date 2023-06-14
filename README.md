@@ -17,19 +17,8 @@ Install Rust. Follow the instructions for your operating system here: https://ta
 Install dependencies with `npm install` (or `pnpm install` or `yarn`)
 
 
-If the above command didn't install `tauri-cli` (verify with `cargo tauri --version`) install it by running `cargo install tauri-cli`(to build from source)
+Install `tauri-cli` by running `cargo install tauri-cli`(to build from source)
 
-
-Alternatively, `tauri-cli` can also be installed from a pre-built binary with any of the following commands:
-
-
-`npm add -D @tauri-apps/cli`
-
-
-`yarn add -D @tauri-apps/cli`
-
-
-`pnpm add -D @tauri-apps/cli`
 
 
 ## Building and running
